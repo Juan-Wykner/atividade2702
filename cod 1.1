@@ -1,0 +1,25 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Soma {
+    public static int soma(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("Digite o primeiro número: ");
+            int num1 = scanner.nextInt();
+
+            System.out.print("Digite o segundo número: ");
+            int num2 = scanner.nextInt();
+
+            System.out.println("Resultado: " + soma(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Erro: ambos os valores devem ser números inteiros.");
+        } finally {
+            scanner.close();
+        }
+    }
+}
